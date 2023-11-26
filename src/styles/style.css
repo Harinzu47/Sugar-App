@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+/* navbar */
+nav {
+    background-color: #FAF3DD;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+nav div {
+    padding: 10px;
+}
+
+nav div a {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    margin: 0 10px;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #333;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    font-weight: bolder;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    background-color: #FAF3DD;
+    border: none;
+}
+  
+.hamburger img {
+    width: 44px;
+    height: 44px;
+}
+
+.hamburger .bi {
+    width: 44px;
+    height: 44px;
+}
+
+/* hero */
+.hero {
+    position: relative;
+    text-align: center; 
+    overflow: hidden;
+  }
+  
+  .hero img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    border-radius: 5px;
+    padding: 20px;
+  }
+  
+  .hero-text h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3rem; 
+  }
+  
+  .hero-text p {
+    font-size: 18px; 
+  }
+
+  /* explain */
+
+  .explain {
+    background-color: #FAF3DD; 
+}
+
+.left-explanation {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    margin: 0 650px 20px 20px;
+    padding-top: 100px;
+}
+
+.right-explanation {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    flex-direction: column;
+    margin: 20px 20px 0 650px;
+    padding-bottom: 100px;
+}
+
+.left-explanation h2,
+.right-explanation h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.left-explanation p,
+.right-explanation p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    text-align: justify;
+}
+
+/* why sugar */
+.why h2 {
+    padding-top: 50px;
+    text-align: center;
+    color: #333;
+}
+
+.color {
+    background-color: #4A7C59;
+}
+
+.card-title, .card-text {
+    color: #FAF3DD;
+}
+
+.why {
+    padding: 40px;
+    text-align: center;
+    background-color: #CFE1B9;
+}
+
+.card {
+    margin: 20px 0;
+}
+
+.row {
+    padding-bottom: 50px;
+}
+
+.card-img-top {
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* Footer styling */
+footer {
+    background-color: #132A13;
+    padding: 20px 0;
+}
+
+.container-footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.name, .contact, .social-media {
+    align-items: center;
+}
+
+.name h1 {
+    color: #FAF3DD;
+    font-size: 24px;
+}
+
+.contact ul,
+.social-media ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact p,
+.social-media div p {
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #FAF3DD;
+}
+
+.contact li,
+.social-media li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.contact li a {
+    text-decoration: none;
+    color: #FAF3DD;
+}
+
+.contact li i,
+.social-media li i {
+    margin-right: 10px;
+    font-size: 24px;
+    color: white;
+}
+
+.icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* FAQ styling */
+.faq {
+    background-color: #FAF3DD;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.faq h2 {
+    margin: 30px 0;
+}
+
+.accordion-item {
+    width: 80%;
+    margin: 0 auto;
+    border: none;
+}
+
+.accordion-button {
+    background-color: #FFFFFF; 
+    color: #333; 
+    border: 1px solid #FFFFFF; 
+    border-radius: 5px;
+}
+
+.accordion-header button {
+    width: 100%;
+    text-align: left;
+}
+
