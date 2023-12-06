@@ -1,255 +1,272 @@
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
+
 /* navbar */
 nav {
-    background-color: #FAF3DD;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+  background-color: #faf3dd;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 nav div {
-    padding: 10px;
+  padding: 10px;
 }
 
 nav div a {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
 }
 
 nav ul {
-    list-style-type: none;
-    display: flex;
-    margin: 0 10px;
+  list-style-type: none;
+  display: flex;
+  margin: 0 10px;
 }
 
 nav ul li {
-    margin-left: 20px;
+  margin-left: 20px;
 }
 
 nav ul li a {
-    color: #333;
-    text-decoration: none;
+  color: #333;
+  text-decoration: none;
 }
 
 nav ul li a:hover {
-    font-weight: bolder;
+  font-weight: bolder;
 }
 
 .hamburger {
-    display: none;
-    cursor: pointer;
-    background-color: #FAF3DD;
-    border: none;
+  display: none;
+  cursor: pointer;
+  background-color: #faf3dd;
+  border: none;
 }
-  
+
 .hamburger img {
-    width: 44px;
-    height: 44px;
+  width: 44px;
+  height: 44px;
 }
 
 .hamburger .bi {
-    width: 44px;
-    height: 44px;
+  width: 44px;
+  height: 44px;
 }
 
 /* hero */
 .hero {
-    position: relative;
-    text-align: center; 
-    overflow: hidden;
-  }
-  
-  .hero img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .hero-text {
-    position: absolute;
-    top: 50%; 
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    color: white; 
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
-    border-radius: 5px;
-    padding: 20px;
-  }
-  
-  .hero-text h1 {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3rem; 
-  }
-  
-  .hero-text p {
-    font-size: 18px; 
-  }
+  position: relative;
+  text-align: center;
+  overflow: hidden;
+}
 
-  /* explain */
+.hero img {
+  width: 100%;
+  height: auto;
+}
 
-  .explain {
-    background-color: #FAF3DD; 
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.hero-text h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 3rem;
+}
+
+.hero-text p {
+  font-size: 18px;
+}
+
+/* image */
+
+.rounded-circle {
+  width: 180px;
+  height: 180px;
+}
+
+/* explain */
+
+.explain {
+  background-color: #faf3dd;
 }
 
 .left-explanation {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    margin: 0 650px 20px 20px;
-    padding-top: 100px;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  margin: 0 650px 20px 20px;
+  padding-top: 100px;
 }
 
 .right-explanation {
-    display: flex;
-    justify-content: end;
-    align-items: end;
-    flex-direction: column;
-    margin: 20px 20px 0 650px;
-    padding-bottom: 100px;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  flex-direction: column;
+  margin: 20px 20px 0 650px;
+  padding-bottom: 100px;
 }
 
 .left-explanation h2,
 .right-explanation h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    font-weight: bolder;
+  font-size: 24px;
+  margin-bottom: 10px;
+  font-weight: bolder;
 }
 
 .left-explanation p,
 .right-explanation p {
-    font-size: 16px;
-    line-height: 1.5;
-    color: #333;
-    text-align: justify;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+  text-align: justify;
+}
+
+#DiabetesDish {
+  background-color: #faf3dd;
+}
+
+#button-addon2 {
+  background-color: white;
 }
 
 /* why sugar */
 .why h2 {
-    padding-top: 50px;
-    text-align: center;
-    color: #333;
+  padding-top: 50px;
+  text-align: center;
+  color: #333;
 }
 
 .color {
-    background-color: #4A7C59;
+  background-color: #4a7c59;
 }
 
-.card-title, .card-text {
-    color: #FAF3DD;
+.card-title,
+.card-text {
+  color: #faf3dd;
 }
 
 .why {
-    padding: 40px;
-    text-align: center;
-    background-color: #CFE1B9;
+  padding: 40px;
+  text-align: center;
+  background-color: #cfe1b9;
 }
 
 .card {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .row {
-    padding-bottom: 50px;
+  padding-bottom: 50px;
 }
 
 .card-img-top {
-    max-height: 200px;
-    object-fit: cover;
+  max-height: 200px;
+  object-fit: cover;
 }
 
 /* Footer styling */
 footer {
-    background-color: #132A13;
-    padding: 20px 0;
+  background-color: #132a13;
+  padding: 20px 0;
 }
 
 .container-footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.name, .contact, .social-media {
-    align-items: center;
+.name,
+.contact,
+.social-media {
+  align-items: center;
 }
 
 .name h1 {
-    color: #FAF3DD;
-    font-size: 24px;
+  color: #faf3dd;
+  font-size: 24px;
 }
 
 .contact ul,
 .social-media ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
 }
 
 .contact p,
 .social-media div p {
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #FAF3DD;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #faf3dd;
 }
 
 .contact li,
 .social-media li {
-    display: flex;
-    align-items: center;
-    margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
 }
 
 .contact li a {
-    text-decoration: none;
-    color: #FAF3DD;
+  text-decoration: none;
+  color: #faf3dd;
 }
 
 .contact li i,
 .social-media li i {
-    margin-right: 10px;
-    font-size: 24px;
-    color: white;
+  margin-right: 10px;
+  font-size: 24px;
+  color: white;
 }
 
 .icon {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
-
 
 /* FAQ styling */
 .faq {
-    background-color: #FAF3DD;
-    padding: 50px 0;
-    text-align: center;
+  background-color: #faf3dd;
+  padding: 50px 0;
+  text-align: center;
 }
 
 .faq h2 {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
 .accordion-item {
-    width: 80%;
-    margin: 0 auto;
-    border: none;
+  width: 80%;
+  margin: 0 auto;
+  border: none;
 }
 
 .accordion-button {
-    background-color: #FFFFFF; 
-    color: #333; 
-    border: 1px solid #FFFFFF; 
-    border-radius: 5px;
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
 }
 
 .accordion-header button {
-    width: 100%;
-    text-align: left;
+  width: 100%;
+  text-align: left;
 }
-
