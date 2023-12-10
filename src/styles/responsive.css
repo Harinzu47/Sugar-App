@@ -1,34 +1,43 @@
 /* Responsive Styling */
-@media (max-width: 768px) {
-    .hamburger {
-        display: block; 
-      }
-    
-      .nav-list {
-        display: none; 
-      }
-    .navbar.open .nav-list {
-        display: flex;
-        flex-direction: column;
-        background-color: #FAF3DD; 
-        color: black;
-        position: absolute;
-        top: 73px; 
-        left: 0;
-        right: 0;
-        z-index: 1000;
-      }
-    
-    .navbar.open .nav-list .nav-item {
+@media screen and (min-width: 650px) {
+    .app-bar {
+        grid-template-columns: 1fr auto;
+        padding: 8px 16px;
+    }
+
+    .app-bar .app-bar__brand h1 {
+        font-size: 1.5em;
+    }
+
+    .app-bar .app-bar__menu {
+        display: none;
+    }
+
+    .app-bar .app-bar__navigation {
+        position: static;
+        width: 100%;
+    }
+
+    .app-bar .app-bar__navigation ul li {
+        display: inline-block;
+        text-decoration: none;
+    }
+
+    .app-bar .app-bar__navigation ul li a {
+        display: inline-block;
         text-align: center;
-        padding: 5px;
-      }
+        width: 120px;
+        margin: 0;
+        list-style-type: none;
+    }
+
 }
 
 @media (max-width: 1024px) {
     .right-explanation {
         margin: 20px 20px 0 200px;
     }
+
     .left-explanation {
         margin: 0 200px 0 20px;
     }
@@ -38,6 +47,7 @@
     .right-explanation {
         margin: 20px 20px 0 300px;
     }
+
     .left-explanation {
         margin: 0 300px 0 20px;
     }
@@ -47,16 +57,19 @@
     .hero-text h1 {
         font-size: 2rem;
     }
+
     .right-explanation {
         display: flex;
         align-items: center;
         margin: 20px 20px 0 20px;
     }
+
     .left-explanation {
         display: flex;
         align-items: center;
         margin: 0 20px 0 20px;
     }
+
     .container-footer {
         flex-direction: column;
         text-align: center;
@@ -70,5 +83,46 @@
 
     .social-media li i {
         font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .blog__content {
+        padding: 16px 16px;
+    }
+
+    .blog__description,
+    .blog__date,
+    .blog__button {
+        font-size: 14px;
+    }
+
+    .all__content {
+        flex-direction: column;
+    }
+
+    .blog__image {
+        width: 100%;
+        border-radius: 1rem;
+    }
+}
+
+
+@media screen and (min-width: 650px) {
+    .blog__content {
+        margin: 0 auto;
+        max-width: 650px;
+    }
+}
+
+
+@media screen and (min-width: 900px) {
+    .blog__content {
+        padding: 16px 32px;
     }
 }

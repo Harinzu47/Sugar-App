@@ -3,61 +3,97 @@
   padding: 0;
 }
 
-/* navbar */
-nav {
+body {
   background-color: #faf3dd;
-  display: flex;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  padding: 8px;
+  background-color: #000000;
+  color: white;
+  z-index: 100;
+  min-height: 44px;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/*
+  AppBar
+*/
+
+.app-bar {
+  padding: 8px 16px;
+  background-color: #faf3dd;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  gap: 10px;
   justify-content: space-between;
-  align-items: center;
-  padding: 10px;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
 }
 
-nav div {
-  padding: 10px;
-}
-
-nav div a {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-  text-decoration: none;
-}
-
-nav ul {
-  list-style-type: none;
+.app-bar .app-bar__menu {
   display: flex;
-  margin: 0 10px;
+  align-items: center;
+  padding: 8px 16px;
 }
 
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: #333;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  font-weight: bolder;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-  background-color: #faf3dd;
+.app-bar .app-bar__menu button {
+  background-color: transparent;
   border: none;
+  font-size: 18px;
+  padding: 8px 16px;
+  cursor: pointer;
 }
 
-.hamburger img {
-  width: 44px;
-  height: 44px;
+.app-bar .app-bar__brand {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  margin-left: 10px;
 }
 
-.hamburger .bi {
-  width: 44px;
-  height: 44px;
+.app-bar .app-bar__brand h1 {
+  font-family: "Dancing Script", cursive;
+  color: #000000;
+  font-size: 22px;
+  user-select: none;
 }
+
+.app-bar .app-bar__navigation {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  left: -800px;
+  transition: all 0.3s;
+  background-color: #faf3dd;
+  overflow: hidden;
+}
+
+.app-bar .app-bar__navigation.open {
+  list-style: none;
+  left: 0;
+  padding: 10px;
+}
+
+.app-bar .app-bar__navigation ul li a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+/*
 
 /* hero */
 .hero {
@@ -194,13 +230,21 @@ footer {
   margin: 0 auto;
 }
 
-.name,
+.footer_brand,
 .contact,
 .social-media {
   align-items: center;
 }
 
-.name h1 {
+.footer_brand {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.footer_brand h1 {
+  font-family: "Dancing Script", cursive;
   color: #faf3dd;
   font-size: 24px;
 }
@@ -269,4 +313,103 @@ footer {
 .accordion-header button {
   width: 100%;
   text-align: left;
+}
+
+/**Blogs**/
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  padding: 32px;
+  margin: 20px auto;
+
+}
+
+.all-wrapper {
+  margin: 10px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); */
+
+  margin: 30px;
+  /* background-color: #ffffff; */
+}
+
+.image {
+  flex-basis: 50%;
+  /* background-color: aqua; */
+  align-self: stretch;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.detail_blog {
+  flex-basis: 50%;
+  /* background-color: white; */
+  padding: 10px;
+}
+
+.blog__title {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.blog__description,
+.blog__date {
+  font-size: 16px;
+  margin-top: 12px;
+  text-align: justify;
+}
+
+.blog__button {
+  font-size: 16px;
+  margin-top: 24px;
+  cursor: pointer;
+  padding: 8px 16px;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  background-color: #2c3e50;
+  transition: opacity 0.3s;
+  min-height: 44px;
+}
+
+.blog__button:hover {
+  opacity: 0.8;
+}
+
+
+/* listPage */
+
+.listPage {
+  padding: 10px;
+  text-align: center;
+  list-style: none;
+}
+
+.listPage li {
+  background-color: #ffffffBD;
+  padding: 20px;
+  display: inline-block;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.listPage .active {
+  background-color: #132a13;
+  color: #fff;
 }

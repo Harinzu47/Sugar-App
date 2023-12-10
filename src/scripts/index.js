@@ -3,14 +3,19 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import "../styles/style.css"
 import "../styles/responsive.css"
+import App from './views/app';
 import * as bootstrap from 'bootstrap';
 
-const toggleNav = () => {
-    const navList = document.querySelector('.navbar');
-    navList.classList.toggle('open');
-};
+const app = new App({
+    button: document.querySelector('#hamburgerButton'),
+    drawer: document.querySelector('#navigationDrawer'),
+    content: document.querySelector('#mainContent'),
+});
 
-window.addEventListener("DOMContentLoaded", () => {
-    const button = document.querySelector('.hamburger');
-    button.addEventListener('click', toggleNav);
+window.addEventListener('hashchange', () => {
+    app.renderPage();
+});
+
+window.addEventListener('load', () => {
+    app.renderPage();
 });
