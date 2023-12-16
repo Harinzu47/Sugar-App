@@ -413,3 +413,55 @@ footer {
   background-color: #132a13;
   color: #fff;
 }
+
+/* food item */
+
+.food-title, .food-text {
+  color: #000000;
+}
+
+.link-card {
+  text-decoration: none;
+}
+
+/* food detail */
+.detail-h2 {
+  margin: 10px;
+  text-align: center;
+}
+
+#detail-food {
+  max-width: 800px;
+  margin: 20px auto;
+  border: 1px solid #533b03; 
+  padding: 20px; 
+  border-radius: 8px;
+}
+
+.recipe-container {
+  text-align: center;
+}
+
+.img-detail {
+  max-width: 100%;
+  height: auto;
+}
+
+.detail-title {
+  color: #333;
+}
+
+.detail-summary {
+  color: #555;
+  text-align: justify;
+}
+
+.details {
+  margin-top: 10px;
+  color: #777;
+}
+
+.detail-instructions {
+  margin-top: 20px;
+  text-align: left;
+}
