@@ -50,17 +50,45 @@ const DIABETESDISH = {
       const bloodSugarInput = document.getElementById('bloodSugarInput').value;
       
       let katalog;
+      let alertMessage;
+  
+      // Clear previous alert
+      const previousAlert = document.querySelector('.blood-sugar-alert');
+      if (previousAlert) {
+        previousAlert.remove();
+      }
+  
       if (bloodSugarInput < 70) {
         katalog = await foodsResource.getHighSugarList();
+        alertMessage = `
+          <div class="alert alert-danger blood-sugar-alert text-center m-5" role="alert">
+            Your blood sugar is low. Please consume what we recommend.
+          </div>`;
       } else if (bloodSugarInput >= 70 && bloodSugarInput <= 120) {
         katalog = await foodsResource.getNormalSugarList();
+        alertMessage = `
+          <div class="alert alert-success blood-sugar-alert text-center m-5" role="alert">
+            Your blood sugar is normal. Please keep what you eat in moderation.
+          </div>`;
       } else {
         katalog = await foodsResource.getLowSugarList();
+        alertMessage = `
+          <div class="alert alert-danger blood-sugar-alert text-center m-5" role="alert">
+            Your blood sugar is high. Watch your diet with the foods we recommend.
+          </div>`;
       }
       
       const listKatalog = document.getElementById('foodContainer');
-      listKatalog.innerHTML = ''; 
+      const alertContainer = document.createElement('div');
+      alertContainer.innerHTML = alertMessage;
   
+      // Insert the alert before the food container
+      listKatalog.parentElement.insertBefore(alertContainer, listKatalog);
+  
+      // Clear previous food items
+      listKatalog.innerHTML = '';
+  
+      // Render food items
       katalog.forEach((food) => {
         listKatalog.innerHTML += foodItem(food);
       });
