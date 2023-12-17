@@ -17,7 +17,7 @@ function formatISODateToCustomFormat(isoDate) {
 const blogItem = (blog) => `
 <div class="card col m-2 mx-auto" style="width: 35rem; border-radius: 15px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);>
   <div class="card-body">
-  <img class="card-img-top lazyload" src="${blog.urlToImage}" alt="${blog.title}">
+  <img class="card-img-top lazyload" src="${blog.image}" alt="${blog.title}">
     <h5 class="card-title">${blog.title}</h5>
     <p class="card-text"> ${formatISODateToCustomFormat(blog.publishedAt)}</p>
     <p class="card-text">${blog.description}</p>

@@ -4,8 +4,8 @@ const CONFIG = {
   BASE_IMG_URL: 'https://spoonacular.com/cdn/ingredients_100x100/',
   PROXYURL: "https://cors-anywhere.herokuapp.com/",
 
-  KEY2: '7d45850042204fd8ae01928291039e81',
-  BASE_URL2: 'https://newsapi.org/v2/',
+  KEY2: '946b86ed5d0b0040a8febbbc36e267c8',
+  BASE_URL2: 'https://gnews.io/api/v4/',
   CACHE_NAME: new Date().toISOString(),
 
 };
