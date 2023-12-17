@@ -1,7 +1,12 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
+const ImageminWebpackPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const imageminPngquant = require('imagemin-pngquant');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 
 module.exports = {
@@ -21,6 +26,33 @@ module.exports = {
         },
       ],
     },
+    optimization: {
+      splitChunks: {
+        chunks: 'all',
+        minSize: 20000,
+        maxSize: 70000,
+        minChunks: 1,
+        maxAsyncRequests: 30,
+        maxInitialRequests: 30,
+        automaticNameDelimiter: '~',
+        enforceSizeThreshold: 50000,
+        cacheGroups: {
+          defaultVendors: {
+            test: /[\\/]node_modules[\\/]/,
+            priority: -10,
+          },
+          default: {
+            minChunks: 2,
+            priority: -20,
+            reuseExistingChunk: true,
+          },
+        },
+      },
+      minimizer: [
+        '...',
+        new CssMinimizerPlugin(),
+      ],
+    },
     plugins: [
         new HtmlWebpackPlugin({
             filename: 'index.html',
@@ -33,6 +65,22 @@ module.exports = {
                   to: path.resolve(__dirname, "dist/"),
                 },
             ],
+        }),
+        new ImageminWebpackPlugin({
+          plugins: [
+            ImageminMozjpeg({
+              quality: 50,
+              progressive: true,
+            }),
+            imageminPngquant({
+              quality: [0.3, 0.5],
+            }),
+          ],
+        }),
+        new BundleAnalyzerPlugin({
+          analyzerMode: 'disabled',
+          generateStatsFile: true,
+          statsOptions: { source: false },
         }),
         new MiniCssExtractPlugin(),
     ],
