@@ -192,8 +192,8 @@ body {
   background-color: #4a7c59;
 }
 
-.card-title,
-.card-text {
+.why-title,
+.why-text {
   color: black;
 }
 
@@ -203,7 +203,7 @@ body {
   background-color: #cfe1b9;
 }
 
-.card {
+.why-card {
   margin: 20px 0;
 }
 
@@ -214,6 +214,10 @@ body {
 .card-img-top {
   max-height: 200px;
   object-fit: cover;
+}
+
+.card-body {
+  height: 230px;
 }
 
 /* Footer styling */
@@ -334,7 +338,7 @@ footer {
 
 .wrapper {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1); */
 
@@ -353,8 +357,8 @@ footer {
 }
 
 .image img {
-  max-width: 100%;
-  height: auto;
+  width: 460px;
+  height: 270px;
 }
 
 .detail_blog {
@@ -373,50 +377,45 @@ footer {
   font-size: 16px;
   margin-top: 12px;
   text-align: justify;
+  width: 100%;
 }
 
-.blog__button {
+/* .button {
+  bottom: 0;
+  text-decoration: none;
   font-size: 16px;
-  margin-top: 24px;
   cursor: pointer;
-  padding: 8px 16px;
-  color: white;
-  border: none;
   border-radius: 5px;
   background-color: #2c3e50;
+  padding: 10px 20px;
+  color: white;
   transition: opacity 0.3s;
-  min-height: 44px;
 }
 
 .blog__button:hover {
   opacity: 0.8;
-}
-
-
-/* listPage */
-
-.listPage {
-  padding: 10px;
-  text-align: center;
-  list-style: none;
-}
-
-.listPage li {
-  background-color: #ffffffBD;
-  padding: 20px;
-  display: inline-block;
-  margin: 0 10px;
-  cursor: pointer;
-}
-
-.listPage .active {
-  background-color: #132a13;
-  color: #fff;
-}
+} */
 
 /* food item */
+.card {
+  color: #fff;
+  padding: 20px;
+  width: 20rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
 
-.food-title, .food-text {
+.card-img {
+  border-radius: 5px;
+}
+
+.card-body {
+  color: #fff;
+  padding: 5px;
+}
+
+.food-title,
+.food-text {
   color: #000000;
 }
 
@@ -433,9 +432,9 @@ footer {
 #detail-food {
   max-width: 800px;
   margin: 20px auto;
-  border: 1px solid #533b03; 
-  padding: 20px; 
-  border-radius: 8px;
+  border: 1px solid #533b03;
+  padding: 20px;
+  border-radius: 5px;
 }
 
 .recipe-container {
@@ -445,6 +444,7 @@ footer {
 .img-detail {
   max-width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
 .detail-title {

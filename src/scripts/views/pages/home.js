@@ -26,33 +26,33 @@ const Home = {
         <h2><b>Why Sugar</b>Control</h2>
         <div class="row">
             <div class="col-md-4">
-                <div class="card">
+                <div class="why-card ">
                     <img src="img/unsplash_WhQAZy14xZU.png" class="card-img-top" alt="...">
                     <div class="card-body color">
-                        <h5 class="card-title">Customized Smart Eating</h5>
-                        <p class="card-text">Unlock nutritional wisdom with our Interactive Blood Sugar Calculator,
+                        <h5 class="why-title">Customized Smart Eating</h5>
+                        <p class="why-text">Unlock nutritional wisdom with our Interactive Blood Sugar Calculator,
                             monitoring and offering recommendations tailored to your blood sugar levels, assisting
                             you in making informed food choices.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="why-card ">
                     <img src="img/unsplash_jkDLNDGougw.png" class="card-img-top" alt="...">
                     <div class="card-body color">
-                        <h5 class="card-title">Up-to-Date Meal Plans</h5>
-                        <p class="card-text">Design healthy meal plans based on your blood 
+                        <h5 class="why-title">Up-to-Date Meal Plans</h5>
+                        <p class="why-text">Design healthy meal plans based on your blood 
                         sugar conditions with our Custom Meal Planner, complete with practical 
                         guidance to help you make balanced and delightful food choices.</p>
                     </div>
                 </div>
             </div>
             <div class="col-md-4">
-                <div class="card">
+                <div class="why-card ">
                     <img src="img/unsplash_J2e34-1CVVs.png" class="card-img-top" alt="...">
                     <div class="card-body color">
-                        <h5 class="card-title">Timely Nutrition Insights</h5>
-                        <p class="card-text">Access the latest nutritional information and 
+                        <h5 class="why-title">Timely Nutrition Insights</h5>
+                        <p class="why-text">Access the latest nutritional information and 
                         health tips through our expert articles, a resource ensuring you 
                         receive support and inspiration on your nutritional health journey.</p>
                     </div>

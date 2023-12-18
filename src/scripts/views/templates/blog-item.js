@@ -1,29 +1,27 @@
 function formatISODateToCustomFormat(isoDate) {
-    const date = new Date(isoDate);
+  const date = new Date(isoDate);
 
-    const formattedDate = date.toLocaleDateString('en-US', {
-        day: 'numeric',
-        month: 'short',
-        year: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-        timeZoneName: 'short',
-    });
+  const formattedDate = date.toLocaleDateString('en-US', {
+    day: 'numeric',
+    month: 'short',
+    year: 'numeric',
+  });
 
-    return formattedDate;
+  return formattedDate;
 }
 
 const blogItem = (blog) => `
-<div class="card col m-2 mx-auto" style="width: 35rem; border-radius: 15px; box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);>
-  <div class="card-body">
-  <img class="card-img-top lazyload" src="${blog.image}" alt="${blog.title}">
-    <h5 class="card-title">${blog.title}</h5>
-    <p class="card-text"> ${formatISODateToCustomFormat(blog.publishedAt)}</p>
-    <p class="card-text">${blog.description}</p>
+  <div class="wrapper">
+  <div class="image">
+  <img class="img lazyload" src="${blog.image}" alt="${blog.title}">
+  </div>
+
+  <div class="detail_blog">
+  <p class="blog__date"> ${formatISODateToCustomFormat(blog.publishedAt)}</p>
+  <h5 class="blog__title">${blog.title}</h5>
+    <p class="blog__description">${blog.description}</p>
     <a href="${blog.url}" class="btn btn-dark">Read More</a>
   </div>
-</div>
-
+  </div>
 `
 export default blogItem;
